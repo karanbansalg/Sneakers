@@ -16,20 +16,10 @@ body{
     src: url("./fonts/Montserrat/static/");
 }
 
-main{
-    width: 80%;
-    max-width: 100%;
-    margin: 0 auto;
-    
-      
-}
-
-
-
 .header1{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 5rem;  
     border-bottom: rgba(211, 211, 211, 0.384) 1px solid;   
 }
@@ -53,7 +43,7 @@ a{
     color:grey ;
     opacity: 0.8;
     box-sizing: border-box;
-    padding-top: 20px;  
+    padding-top: 28px;  
 }
 
 .collections:hover{
@@ -100,29 +90,66 @@ a{
     border:2px solid #FF7D1B;
     border-radius: 50%;
 }
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+/* .main{   
+   height: 80%;
+   width: 60%; 
+   margin: 0px auto;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+} */
 
-.main{
-    
+.sections{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+    gap: 4rem;
+    width: 100%;
 }
 
 .section1{
-    height: 100%;
-    width: 100%;
+   height: 100%;
+   width: 100%;
+   gap: 1.7rem;
+   display: flex;
+   flex-direction: column;
+
+}
+
+.images{
+    height: auto;
+    width: 100%;   
+    max-width:fit-content;
+    object-fit: cover;
+}
+
+.thumbnail{ 
+    gap: 1rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    
+    overflow: hidden;
+    width: 100%;   
+}
+
+.thumbnail .button{
+  border:3px solid #FF7D1B; 
+}
+
+.thumbImage{
+    border-radius: 10px;
 }
 
 .mainImage{    
+    max-width: 100%;
     border-radius: 10px;
+    object-fit: cover;
+    
 }
 
 .section2{
@@ -130,14 +157,14 @@ a{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
      
 }
 
 .header{
     display: flex;
     flex-direction: column;
-    height:16rem ;
+    height:15rem ;
     justify-content: space-between;   
 }
 
@@ -156,7 +183,28 @@ a{
     border-radius: 10px;
 }
 
-@media (max-width:450px) and (max-height:956px) {
+.cartBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #FF7D1B;
+    width: 20.5rem;
+    border-radius: 10px;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+ .thumbImage:hover{   
+   opacity: 0.4;  
+}
+
+.menu{
+ display: none;
+}
+
+
+@media (max-width:450px) and (min-width:320px){
 
     .brand .menuLogo{
         display: block;
@@ -189,35 +237,43 @@ a{
     .thumbnail{
         display: none;
     }
+    .header p{
+        max-width: fit-content;
+    }
     
-}
+    .mainRate{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sections{
+        display: block;
+       
+    }
+    .container{
+        margin: 0;
+    }
+    .mainImage{
+        border-radius: 0;
+    }
 
-.cartBtn{
+    .section2{
+     max-width: 400px;
+    margin: 0 auto;
+    margin-top: 1rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background-color: #FF7D1B;
-    width: 20.5rem;
-    border-radius: 10px;    
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    flex-direction: column;
+     
+    }
+    .btns {
+        display: flex;
+        flex-direction: column;
+    }
+    .btns button{
+        width: 100px;
+    }
 }
 
-
-
-
-
- .thumbImage:hover{
-    border:3px solid #FF7D1B;    
-   opacity: 0.4;  
-}
-
-
-
-.menu{
- display: none;
-}
 
 
 
