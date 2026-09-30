@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
 </head>
 <body>
     
-     
+   <div class="full">
+     <div class="menu absolute z-10 hidden h-[150vh] w-[65vw] bg-white">
+            <div class="closeMenu">
+                <img src="assets/icon-close.svg"/>
+            </div>
+                <div class="navMenu flex flex-column">
+                <a class="collections" href="#">Collections</a>
+                <a class="men" href="#">Men</a>
+                <a class="women" href="#">Women</a>
+                <a class="about" href="#">About</a>
+                <a class="contact" href="#">Contact</a> 
+                </div>
+        </div>  
     <main>
+       
         <div class="header1">
          <div class="brand" style="display: flex; align-items: center; justify-content: center;">
             <div class="logo"  >
@@ -36,17 +49,22 @@
 </main>
 
      <div class="main">
-        <div class="container">
+      <div class="container">
        <div class="sections">
           <div class="section1">
-                 <div class="images" >   
-                    <img class="mainImage" src="assets/image-product-1.jpg" /> 
+                 <div class="images relative"  >   
+                    <img class="mainImage" src="assets/image-product-1.jpg" />
+                    <div class="slider hidden ">
+                        <button class="prev absolute bottom-[50%] left-[3%] rounded-full bg-white h-[10%] w-[10%] px-4 py-2 "><img style="margin: 0px auto;" src="assets/icon-previous.svg"></button>
+                        <button class="next absolute bottom-[50%] right-[5%] rounded-full bg-white h-[10%] w-[10%] px-4 py-2"><img style="margin: 0px auto;" src="assets/icon-next.svg"/></button>
+                    </div>
                  </div>       
+
                      <div class="thumbnail">
-                         <button><img class="thumbImage" src="assets/image-product-1-thumbnail.jpg" /></button>
-                         <button><img class="thumbImage" src="assets/image-product-2-thumbnail.jpg" /></button>
-                         <button><img class="thumbImage" src="assets/image-product-3-thumbnail.jpg" /></button>
-                         <button><img class="thumbImage" src="assets/image-product-4-thumbnail.jpg" /></button>
+                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage "  src="assets/image-product-1-thumbnail.jpg" /></button>
+                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-2-thumbnail.jpg" /></button>
+                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-3-thumbnail.jpg" /></button>
+                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-4-thumbnail.jpg" /></button>
                      </div>       
             </div>
             
@@ -72,7 +90,7 @@
               </div>
            
             
-              <form class="btns translate-y-3" >
+              <form class="btns" >
                 
              <div class="btn1" >
                 <span class="decrease" style="border: none;">
@@ -83,7 +101,7 @@
                 <img src="assets/icon-plus.svg" />
                </span>
              </div>
-             <buttton class="cartBtn cursor-pointer"><img style="height: 20px; width: 30px;"  src="assets/icons8-shopping-cart-32.png" /> Add to cart</buttton>
+             <buttton type="button" class="cartBtn cursor-pointer"><img style="height: 20px; width: 30px;"  src="assets/icons8-shopping-cart-32.png" /> Add to cart</buttton>
                </form>
               </div>
               </div>
@@ -91,7 +109,7 @@
                </div>
                 
         
-    
+    </div>
     
 
                <script src="app.js"></script>

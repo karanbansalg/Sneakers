@@ -69,8 +69,7 @@ a{
 .about:hover{
   color: black;
   opacity: 0.8;
-  border-bottom: 3px solid #FF7D1B;
-  
+  border-bottom: 3px solid #FF7D1B; 
   box-sizing: border-box;
 }
 .contact:hover{
@@ -94,6 +93,7 @@ a{
     max-width: 900px;
     margin: 0 auto;
     margin-top: 4rem;
+
 }
 /* .main{   
    height: 80%;
@@ -126,6 +126,13 @@ a{
     width: 100%;   
     max-width:fit-content;
     object-fit: cover;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap:0.6rem;
 }
 
 .thumbnail{ 
@@ -134,39 +141,37 @@ a{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 100%;   
+    width: 100%;
+      
 }
 
-.thumbnail .button{
-  border:3px solid #FF7D1B; 
-}
+
+
 
 .thumbImage{
-    border-radius: 10px;
+    border-radius: 10px;   
+    
 }
 
 .mainImage{    
     max-width: 100%;
     border-radius: 10px;
     object-fit: cover;
-    
+       
 }
-
+.body{
+    background-color: #404040;
+}
 .section2{
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    gap: 1.4rem;
      
 }
 
-.header{
-    display: flex;
-    flex-direction: column;
-    height:15rem ;
-    justify-content: space-between;   
-}
+
 
 .btns{
     display: flex;
@@ -178,7 +183,7 @@ a{
     align-items: center;
     justify-content: space-around;
     background-color: #f0f0f0;
-    width: 150px;
+    width: 100%;
     height: 50px;
     border-radius: 10px;
 }
@@ -189,7 +194,7 @@ a{
     justify-content: center;
     gap: 1rem;
     background-color: #FF7D1B;
-    width: 20.5rem;
+    width: 100%;
     border-radius: 10px;    
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -197,6 +202,7 @@ a{
 
  .thumbImage:hover{   
    opacity: 0.4;  
+   
 }
 
 .menu{
@@ -204,7 +210,7 @@ a{
 }
 
 
-@media (max-width:450px) and (min-width:320px){
+@media (max-width:450px) {
 
     .brand .menuLogo{
         display: block;
@@ -252,25 +258,46 @@ a{
     }
     .container{
         margin: 0;
+        width: 100%;
     }
     .mainImage{
         border-radius: 0;
+        width: 100%;
     }
 
     .section2{
-     max-width: 400px;
+    
     margin: 0 auto;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-     
+    gap: 5px;
+    padding: 1rem; 
     }
     .btns {
         display: flex;
         flex-direction: column;
     }
-    .btns button{
-        width: 100px;
+
+    .btn1{
+        
+        margin: 0px auto;
+        
+    }
+
+    .btns .cartBtn{
+        height: 35px;
+        width: 100%;
+        height: 50px;
+        margin: 0px auto;
+        border-radius: 10px;
+    }
+
+    .slider{
+        display: block;
+    }
+    .menu{
+        display: block;
     }
 }
 
