@@ -20,3 +20,45 @@ dec.addEventListener('click',()=>{
   count--
   counter.textContent = count
 })
+
+
+// for menu
+
+const menu = document.querySelector('.menu')
+const closeMenu = document.querySelector('.closeMenu')
+const menuLogo = document.querySelector('.menuLogo')
+
+
+let moved = false
+menu.style.transition = "left 0.5s ease" 
+function onClickMenu(){
+  if(moved == false){ 
+    
+    menu.style.position = 'fixed'
+    menu.style.transition = "left 0.5s ease" 
+    menu.style.left ='0%'      
+    moved = true
+    console.log(moved);
+  }
+}
+
+function onCloseMenu(){
+  if(moved == true){
+    menu.style.transition = "left 0.5s ease"
+    menu.style.left = '-100%'
+    
+    moved = false
+    console.log(moved);
+  }
+  
+}
+
+
+menuLogo.addEventListener('click',onClickMenu)
+closeMenu.addEventListener('click',onCloseMenu)
+
+
+// for cart
+
+
+

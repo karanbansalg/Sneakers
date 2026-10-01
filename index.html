@@ -11,8 +11,10 @@
 <body>
     
    <div class="full">
-     <div class="menu absolute z-10 hidden h-[150vh] w-[65vw] bg-white">
-            <div class="closeMenu">
+     <div class="overlay">
+        <div class="menu absolute z-10 hidden h-[150vh] w-[65vw] bg-white">
+            <div class="insideMenu">
+                <div onclick="onCloseMenu()" class="closeMenu cursor-pointer">
                 <img src="assets/icon-close.svg"/>
             </div>
                 <div class="navMenu flex flex-column">
@@ -22,14 +24,16 @@
                 <a class="about" href="#">About</a>
                 <a class="contact" href="#">Contact</a> 
                 </div>
+            </div>
         </div>  
+     </div>
     <main>
        
         <div class="header1">
          <div class="brand" style="display: flex; align-items: center; justify-content: center;">
             <div class="logo"  >
-            <img class="menuLogo h-5 w-5 hidden" src="assets/icon-menu.svg" />
-            <img class="mainLogo "  src="assets/logo.svg" />
+            <img onclick="onOpenMenu()" class="menuLogo cursor-pointer h-5 w-5 hidden" src="assets/icon-menu.svg" />
+            <img class="mainLogo"  src="assets/logo.svg" />
             </div>
             
             <div class="nav">
