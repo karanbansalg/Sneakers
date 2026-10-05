@@ -209,6 +209,71 @@ body{
  display: none;
 }
 
+.cartElements{
+    height: 33vh;
+    width: 25vw;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.5);
+    z-index: 40;
+    background-color:white;
+    left: 65%;
+    top: 9%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    display:none;
+}
+
+.CART1{
+  height: 60px;
+  border-bottom:2px solid rgb(237, 233, 233);
+  padding: 18px 30px;
+  font-weight: 500;
+}
+
+.CART2{
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.CART2 h6{
+    color: gray;
+    font-weight:500;
+    
+}
+
+.cartSection1 {
+    
+    border: 2px solid;    
+}
+
+.cartSection2{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.cartSection21{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    
+}
+
+.cartSection22 button{
+    height: 7vh;
+    width: 100%;
+    font-weight:bold;
+    color: black;
+    font-size:13px;
+    background-color: #FF7D1B;
+    border-radius: 10px;
+}
 
 @media (max-width:767px) {
 
@@ -320,7 +385,33 @@ body{
         font-size:larger;
     }
     
+    .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 99;
+    }
+    .overlay.active{
+        opacity: 1;
+        visibility: visible;
+    }
+    .cartElements{
+        
+        height: 40%;
+        width: 94%;
+        left: 3%;
+        top: 13.5%;
+        
 
+    }
+
+    
 }
 
 

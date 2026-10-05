@@ -11,12 +11,17 @@
 <body>
     
    <div class="full">
-     <div class="overlay">
-        <div class="menu absolute z-10 hidden h-[150vh] w-[65vw] bg-white">
+     
+    <div class="overlay"></div>
+
+        <div class="menu hidden absolute z-100 h-[150vh] w-[65vw] bg-white">
             <div class="insideMenu">
                 <div onclick="onCloseMenu()" class="closeMenu cursor-pointer">
                 <img src="assets/icon-close.svg"/>
             </div>
+
+               
+
                 <div class="navMenu flex flex-column">
                 <a class="collections" href="#">Collections</a>
                 <a class="men" href="#">Men</a>
@@ -24,9 +29,10 @@
                 <a class="about" href="#">About</a>
                 <a class="contact" href="#">Contact</a> 
                 </div>
+                
             </div>
         </div>  
-     </div>
+     
     <main>
        
         <div class="header1">
@@ -48,11 +54,34 @@
         <div class="cart">
           <img class="sideCart translate-y-2" style="width: 1rem; height: 1rem;  cursor: pointer;"  src="assets/icon-cart.svg" />
           <img style="width: 2rem; height: 2rem; cursor: pointer; box-sizing: border-box;  " class="img1" src="assets/image-avatar.png" />          
-        </div>     
+        </div>  
+        
+         <div class="cartElements absolute  ">
+        <div class="CART1">
+            <h1>Cart</h1>
+        </div>
+        <div class="CART2">
+            <div class="cartSection1 hidden">
+                <h6 >Your cart is empty.</h6>      
+            </div>
+            <div class="cartSection2">
+                <div class="cartSection21">
+                    <img class="h-[8vh] rounded" src="assets/image-product-1-thumbnail.jpg" />
+                    <h4 class="text-gray-500 font-semibold">Fall Limited Edition Sneakers $125.00 x  <span>0</span><span class="text-black font-bold">&nbsp&nbsp $125.00</span></h4>
+                    <img class="cursor-pointer" src="assets/icon-delete.svg" />
+                </div>
+                <div class="cartSection22">
+                    <button class="cursor-pointer">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>   
     </div>
 </main>
 
-     <div class="main">
+   
+
+     <div class="main ">
       <div class="container">
        <div class="sections">
           <div class="section1">
@@ -65,7 +94,7 @@
                  </div>       
 
                      <div class="thumbnail">
-                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage "  src="assets/image-product-1-thumbnail.jpg" /></button>
+                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-1-thumbnail.jpg" /></button>
                          <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-2-thumbnail.jpg" /></button>
                          <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-3-thumbnail.jpg" /></button>
                          <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-4-thumbnail.jpg" /></button>
