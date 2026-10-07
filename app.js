@@ -1,27 +1,3 @@
-let inc = document.querySelector('.increase')
-let dec = document.querySelector('.decrease')
-let counter = document.querySelector('.count')
-
-let section1 = document.querySelector('.section1')
-let thumbnail = document.querySelectorAll('.thumbBtn')
-let body = document.querySelector('body')
-
-
-let count = 0
-inc.addEventListener('click',()=>{
-  
-  count++
-  counter.textContent = count
-})
-
-dec.addEventListener('click',()=>{
-  
-  if(count<=0) return
-  count--
-  counter.textContent = count
-})
-
-
 // for menu
 
 const menu = document.querySelector('.menu')
@@ -59,6 +35,7 @@ menuLogo.addEventListener('click',onClickMenu)
 closeMenu.addEventListener('click',onCloseMenu)
 overlay.addEventListener('click',onCloseMenu)
 
+
 // for cart
 
 const cart = document.querySelector('.sideCart')
@@ -67,15 +44,50 @@ const cart2 = document.querySelector(".CART2")
 
 let cartClick = false
 
-function onSideCart(){
+function onOpenSideCart(){
   
-  if(cartClick){
-    cartElements.style.display = 'block'   
-  }else{
-    
+  if(cartClick === false){
+    cartElements.classList.add('active') 
+    cartClick = true   
   }
-  
+
+  else{
+     cartElements.classList.remove('active')
+    cartClick = false
+  }  
 }
 
+cart.addEventListener('click',onOpenSideCart)
 
-cart.addEventListener('click',onSideCart)
+// for counter
+
+let inc = document.querySelector('.increase')
+let dec = document.querySelector('.decrease')
+let counter = document.querySelector('.count')
+let formData = document.querySelector('.btns')
+let cartBtn = document.querySelector('.cartBtn')
+let multiple = document.querySelector('.mul')
+let result = document.querySelector('.result')
+let delCart = document.querySelector('.deleteCart')
+
+let count = 0
+
+inc.addEventListener('click',()=>{
+  count++
+  counter.textContent = count
+})
+
+
+dec.addEventListener('click',()=>{  
+  if(count<=0) return
+  count--
+  counter.textContent = count  
+})
+
+formData.addEventListener('click',(e)=> {
+  e.preventDefault()
+  multiple.textContent = counter.textContent
+})
+
+
+

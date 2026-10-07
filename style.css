@@ -220,7 +220,7 @@ body{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    display:none;
+    
 }
 
 .CART1{
@@ -231,7 +231,7 @@ body{
 }
 
 .CART2{
-    
+    height: 60%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -245,10 +245,7 @@ body{
     
 }
 
-.cartSection1 {
-    
-    border: 2px solid;    
-}
+
 
 .cartSection2{
     display: flex;
@@ -274,6 +271,12 @@ body{
     background-color: #FF7D1B;
     border-radius: 10px;
 }
+
+.cartElements.active{
+        display: block;
+    }
+
+
 
 @media (max-width:767px) {
 
@@ -407,10 +410,8 @@ body{
         width: 94%;
         left: 3%;
         top: 13.5%;
-        
-
     }
-
+    
     
 }
 

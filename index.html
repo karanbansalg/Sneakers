@@ -64,11 +64,11 @@
             <div class="cartSection1 hidden">
                 <h6 >Your cart is empty.</h6>      
             </div>
-            <div class="cartSection2">
-                <div class="cartSection21">
-                    <img class="h-[8vh] rounded" src="assets/image-product-1-thumbnail.jpg" />
-                    <h4 class="text-gray-500 font-semibold">Fall Limited Edition Sneakers $125.00 x  <span>0</span><span class="text-black font-bold">&nbsp&nbsp $125.00</span></h4>
-                    <img class="cursor-pointer" src="assets/icon-delete.svg" />
+            <div class="cartSection2 ">
+                <div class="cartSection21 ">
+                    <img class=" h-[8vh] rounded" src="assets/image-product-1-thumbnail.jpg" />
+                    <h4 class="text-gray-500 font-semibold">Fall Limited Edition Sneakers $125.00 x  <span class="mul">0</span><span class="result text-black font-bold">&nbsp&nbsp $0</span></h4>
+                    <img class="deleteCart cursor-pointer" src="assets/icon-delete.svg" />
                 </div>
                 <div class="cartSection22">
                     <button class="cursor-pointer">Checkout</button>
@@ -78,8 +78,6 @@
     </div>   
     </div>
 </main>
-
-   
 
      <div class="main ">
       <div class="container">
@@ -123,18 +121,17 @@
               </div>
            
             
-              <form class="btns" >
-                
+              <form class="btns"> 
              <div class="btn1" >
-                <span class="decrease" style="border: none;">
+                <span class="decrease cursor-pointer" style="border: none;">
                 <img src="assets/icon-minus.svg" />
                 </span>
                <span class="count"  style="background-color:#f0f0f0;font-size:medium; font-weight:900;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">0</span>
-               <span class="increase" style="border: none;">
+               <span class="increase cursor-pointer" style="border: none;">
                 <img src="assets/icon-plus.svg" />
                </span>
              </div>
-             <buttton type="button" class="cartBtn cursor-pointer"><img style="height: 20px; width: 30px;"  src="assets/icons8-shopping-cart-32.png" /> Add to cart</buttton>
+             <buttton onsubmit="onSubmitForm()" type="submit" class="cartBtn cursor-pointer"><img style="height: 20px; width: 30px;"  src="assets/icons8-shopping-cart-32.png" /> Add to cart</buttton>
                </form>
               </div>
               </div>
@@ -143,8 +140,6 @@
                 
         
     </div>
-    
-
-               <script src="app.js"></script>
+          <script src="app.js"></script>
 </body>
 </html>
