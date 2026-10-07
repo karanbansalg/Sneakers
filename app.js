@@ -69,6 +69,11 @@ let cartBtn = document.querySelector('.cartBtn')
 let multiple = document.querySelector('.mul')
 let result = document.querySelector('.result')
 let delCart = document.querySelector('.deleteCart')
+let cartBtn1 = document.querySelector(".btn1")
+let cartSection1 = document.querySelector(".cartSection1")
+let cartSection2 = document.querySelector(".cartSection2")
+
+
 
 let count = 0
 
@@ -84,10 +89,57 @@ dec.addEventListener('click',()=>{
   counter.textContent = count  
 })
 
+let price = 125
+
 formData.addEventListener('click',(e)=> {
   e.preventDefault()
   multiple.textContent = counter.textContent
+  result.textContent = `  $${(Number(multiple.textContent) * price).toFixed(2)}` 
+})
+
+cartBtn.addEventListener('click',()=>{
+  cartBtn1.style.display = 'flex'
+  cartSection1.style.display = "none"
+  cartSection2.style.display ="flex"
 })
 
 
+
+delCart.addEventListener('click',()=>{
+  count = 0
+  counter.innerText = 0
+  multiple.textContent = 0
+  result.textContent = `  $${0}`
+  cartBtn1.style.display = 'none'
+  cartSection1.style.display = "flex"
+  cartSection2.style.display ="none"
+})
+
+
+// for slider
+
+const prev = document.querySelector('.prev')
+const next = document.querySelector('.next')
+const slides = document.querySelector('.slides')
+const mainImage = document.querySelectorAll('.mainImage')
+
+let current = 0
+
+  next.addEventListener('click',()=>{   
+    mainImage[current].classList.remove("active");
+    current++;
+    if(current >= mainImage.length){
+      current = 0;}
+     mainImage[current].classList.add("active")
+
+});
+
+prev.addEventListener('click',()=>{   
+    mainImage[current].classList.remove("active");
+    current--;
+    if(current < 0){
+      current = mainImage.length - 1;}
+     mainImage[current].classList.add("active")
+
+});
 
