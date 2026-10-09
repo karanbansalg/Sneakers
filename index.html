@@ -10,6 +10,29 @@
 </head>
 <body>
     
+<div class="lightbox ">
+        <div class="overlay-lightbox"></div>
+        <div class="images-lightbox">
+            <img class="close-lightbox h-[20px] w-[20px]" src="assets/icon-close.svg" />
+            <div class="mainImages-lighbox">
+                <img class="mainImage-lighbox active" src="assets/image-product-1.jpg" />
+                <img class="mainImage-lighbox " src="assets/image-product-2.jpg" />
+                <img class="mainImage-lighbox " src="assets/image-product-3.jpg" />
+                <img class="mainImage-lighbox " src="assets/image-product-4.jpg" />
+            </div>
+            <div class="thumbnailImages-lightbox">
+                <button class="btn-lightbox"><img class="thumbnailImage-lightbox" src="assets/image-product-1-thumbnail.jpg" ></button>
+                <button class="btn-lightbox"><img class="thumbnailImage-lightbox" src="assets/image-product-2-thumbnail.jpg" ></button>
+                <button class="btn-lightbox"><img class="thumbnailImage-lightbox" src="assets/image-product-3-thumbnail.jpg" ></button>
+                <button class="btn-lightbox"><img class="thumbnailImage-lightbox" src="assets/image-product-4-thumbnail.jpg" ></button>
+            </div>
+            <div class="slider ">
+                <button class="prev-lightbox cursor-pointer absolute bottom-[50%] left-[-5%] rounded-full bg-white h-[7%] w-[8%] px-4 py-2 "><img style="margin: 0px auto;" src="assets/icon-previous.svg"></button>
+                <button class="next-lightbox cursor-pointer absolute bottom-[50%] right-[-5%] rounded-full bg-white h-[7%] w-[8%] px-4 py-2"><img style="margin: 0px auto;" src="assets/icon-next.svg"/></button>
+            </div>
+        </div>
+     </div>
+
    <div class="full">
      
     <div class="overlay"></div>
@@ -84,7 +107,7 @@
        <div class="sections">
           <div class="section1">
                  <div class="images slides relative"  >   
-                    <img class="mainImage  active" src="assets/image-product-1.jpg" />
+                    <img class="mainImage active " src="assets/image-product-1.jpg" />
                     <img class="mainImage " src="assets/image-product-2.jpg" />
                     <img class="mainImage " src="assets/image-product-3.jpg" />
                     <img class="mainImage " src="assets/image-product-4.jpg" />
@@ -95,10 +118,10 @@
                  </div>       
 
                      <div class="thumbnail">
-                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-1-thumbnail.jpg" /></button>
-                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-2-thumbnail.jpg" /></button>
-                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-3-thumbnail.jpg" /></button>
-                         <button onclick="onThumbnail()" class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-4-thumbnail.jpg" /></button>
+                         <button class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-1-thumbnail.jpg" /></button>
+                         <button class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-2-thumbnail.jpg" /></button>
+                         <button class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-3-thumbnail.jpg" /></button>
+                         <button class="thumbBtn" type="button"><img class="thumbImage" src="assets/image-product-4-thumbnail.jpg" /></button>
                      </div>       
             </div>
             
@@ -134,7 +157,7 @@
                 <img src="assets/icon-plus.svg" />
                </span>
              </div>
-             <buttton onsubmit="onSubmitForm()" type="submit" class="cartBtn cursor-pointer"><img style="height: 20px; width: 30px;"  src="assets/icons8-shopping-cart-32.png" /> Add to cart</buttton>
+             <buttton onsubmit="onSubmitForm()" type="submit" class="cartBtn cursor-pointer h-[50px]"><img style="height: 20px; width: 30px;"  src="assets/icons8-shopping-cart-32.png" /> Add to cart</buttton>
                </form>
               </div>
               </div>

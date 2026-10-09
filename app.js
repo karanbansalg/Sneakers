@@ -129,9 +129,9 @@ let current = 0
     mainImage[current].classList.remove("active");
     current++;
     if(current >= mainImage.length){
-      current = 0;}
-     mainImage[current].classList.add("active")
-
+      current = 0;}     
+     mainImage[current].classList.add("active")   
+     updateButton()   
 });
 
 prev.addEventListener('click',()=>{   
@@ -140,6 +140,78 @@ prev.addEventListener('click',()=>{
     if(current < 0){
       current = mainImage.length - 1;}
      mainImage[current].classList.add("active")
-
+  updateButton()
 });
 
+function updateButton(){
+    if(current === 0 ){
+      prev.style.display = "none"
+    }else{
+      prev.style.display = 'block'
+    }
+
+    if(current === mainImage.length -1 ){
+      next.style.display = "none"
+    }else{
+      next.style.display = 'block'
+    }
+  }
+
+  updateButton()
+
+// for lightbox
+
+const closeLightbox = document.querySelector(".close-lightbox")
+const lightbox = document.querySelector('.lightbox')
+const thumbBtn = document.querySelectorAll('.thumbBtn')
+const prevLightbox = document.querySelector('.prev-lightbox')
+const nextLightbox = document.querySelector(".next-lightbox")
+const mainImagesLightbox = document.querySelector('.mainImages-lighbox')
+const mainImageLighbox = document.querySelectorAll('.mainImage-lighbox')
+const btnLightbox = document.querySelectorAll(".btn-lightbox")
+
+
+
+let currentLight = 0
+
+ 
+
+  nextLightbox.addEventListener('click',()=>{   
+    mainImageLighbox[currentLight].classList.remove("active");
+    currentLight++;
+    if(current >= mainImageLighbox.length){
+      currentLight = 0;
+    }     
+     mainImageLighbox[currentLight].classList.add("active")   
+     onUpdateLightbox()   
+});
+
+  prevLightbox.addEventListener('click',()=>{   
+    mainImageLighbox[currentLight].classList.remove("active");
+    currentLight--;
+    if(currentLight < 0){
+     currentLight = mainImageLighbox.length - 1;
+    }
+     mainImageLighbox[currentLight].classList.add("active")
+     onUpdateLightbox()
+});
+
+function onUpdateLightbox(){
+    if(currentLight === 0 ){
+      prevLightbox.disabled = true
+      prevLightbox.style.opacity = "0.4"
+    }else{
+      prevLightbox.disabled = false
+      prevLightbox.style.opacity = "1"
+    }
+
+    if(currentLight === mainImageLighbox.length -1 ){
+      nextLightbox.disabled = true
+      nextLightbox.style.opacity = "0.4"
+    }else{
+      nextLightbox.disabled = false
+      nextLightbox.style.opacity = "1"
+    }
+  }
+
+  onUpdateLightbox()

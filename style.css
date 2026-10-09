@@ -252,8 +252,6 @@ body{
     
 }
 
-
-
 .cartSection2{
     display: flex;
     flex-direction: column;
@@ -284,7 +282,81 @@ body{
         display: block;
     }
 
+.lightbox{
+    height: 100%;
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.images-lightbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    position: relative;
+}
+
+.mainImage-lighbox{
+    height: 450px;
+    width: 530px;
+    border-radius: 10px;
+    display: none;
+}
+
+.mainImage-lighbox.active{
+    display: block;
+}
+
+.thumbnailImages-lightbox{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.thumbnailImage-lightbox{
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.btn-lightbox:hover{
+    border:  solid #FF7D1B;
+    box-sizing: border-box;
+    border-radius:10px ;
+}
+
+.thumbnailImage-lightbox:hover{
+    opacity: 0.5 ;
+}
+
+.close-lightbox{
+    margin-left: 96%;
+    cursor: pointer;
+    
+}
+
+.overlay-lightbox{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        opacity: 1;
+        
+    }
+    .overlay-lightbox.active{
+        opacity: 1;
+        visibility: visible;
+    }
 
 @media (max-width:767px) {
 
