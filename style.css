@@ -226,9 +226,12 @@ body{
     top: 9%;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 10px; 
     display: none;
 }
+
+
+
 
 .CART1{
   height: 60px;
@@ -292,6 +295,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .images-lightbox{
@@ -317,14 +321,21 @@ body{
 .thumbnailImages-lightbox{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 25px;
+    overflow: hidden;
 }
 
 .thumbnailImage-lightbox{
-    height: 90px;
-    width: 90px;
+    height: 85px;
+    width: 85px;
     border-radius: 10px;
-    box-sizing: border-box;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.btn-lightbox{
+    height: 85px;
+    width: 85px;
 }
 
 .btn-lightbox:hover{

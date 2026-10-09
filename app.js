@@ -50,9 +50,9 @@ function onOpenSideCart(){
     cartElements.classList.add('active') 
     cartClick = true   
   }
-
+                                            
   else{
-     cartElements.classList.remove('active')
+    cartElements.classList.remove('active')
     cartClick = false
   }  
 }
@@ -60,7 +60,7 @@ function onOpenSideCart(){
 cart.addEventListener('click',onOpenSideCart)
 
 // for counter
-
+                                                                          
 let inc = document.querySelector('.increase')
 let dec = document.querySelector('.decrease')
 let counter = document.querySelector('.count')
@@ -73,15 +73,13 @@ let cartBtn1 = document.querySelector(".btn1")
 let cartSection1 = document.querySelector(".cartSection1")
 let cartSection2 = document.querySelector(".cartSection2")
 
-
-
-let count = 0
+let count = 1
 
 inc.addEventListener('click',()=>{
-  count++
   counter.textContent = count
+  count++
+  
 })
-
 
 dec.addEventListener('click',()=>{  
   if(count<=0) return
@@ -93,28 +91,29 @@ let price = 125
 
 formData.addEventListener('click',(e)=> {
   e.preventDefault()
+  
   multiple.textContent = counter.textContent
   result.textContent = `  $${(Number(multiple.textContent) * price).toFixed(2)}` 
+  
 })
 
 cartBtn.addEventListener('click',()=>{
   cartBtn1.style.display = 'flex'
   cartSection1.style.display = "none"
   cartSection2.style.display ="flex"
+  
+
 })
 
-
-
 delCart.addEventListener('click',()=>{
-  count = 0
-  counter.innerText = 0
-  multiple.textContent = 0
-  result.textContent = `  $${0}`
+  count = 1
+  counter.innerText = 1
+  multiple.textContent = 1
+  result.textContent = `  $${1}`
   cartBtn1.style.display = 'none'
   cartSection1.style.display = "flex"
   cartSection2.style.display ="none"
 })
-
 
 // for slider
 
@@ -168,18 +167,18 @@ const prevLightbox = document.querySelector('.prev-lightbox')
 const nextLightbox = document.querySelector(".next-lightbox")
 const mainImagesLightbox = document.querySelector('.mainImages-lighbox')
 const mainImageLighbox = document.querySelectorAll('.mainImage-lighbox')
-const btnLightbox = document.querySelectorAll(".btn-lightbox")
+const btnLightbox = document.querySelectorAll(".thumbnailImage-lightbox")
+const overlayLightbox = document.querySelector('.overlay-lightbox')
 
 
 
-let currentLight = 0
 
- 
+  let currentLight = 0
 
   nextLightbox.addEventListener('click',()=>{   
     mainImageLighbox[currentLight].classList.remove("active");
     currentLight++;
-    if(current >= mainImageLighbox.length){
+    if(currentLight >= mainImageLighbox.length){
       currentLight = 0;
     }     
      mainImageLighbox[currentLight].classList.add("active")   
@@ -195,6 +194,35 @@ let currentLight = 0
      mainImageLighbox[currentLight].classList.add("active")
      onUpdateLightbox()
 });
+
+btnLightbox.forEach((btn, e) => {
+  btn.addEventListener("click", () => {
+    mainImageLighbox[currentLight].classList.remove("active");
+    currentLight = e;
+    mainImageLighbox[currentLight].classList.add("active");
+
+    onUpdateLightbox();
+  });
+});
+
+overlayLightbox.addEventListener('click',()=>{
+  lightbox.style.display = 'none'
+})
+
+thumbBtn.forEach((btn,i)=>{
+  btn.addEventListener('click',()=>{
+    lightbox.style.display = 'flex'
+    console.log(btn,i);
+    mainImageLighbox[currentLight].classList.remove("active");
+    currentLight = i;
+    mainImageLighbox[currentLight].classList.add("active");
+    
+  })
+})
+
+ closeLightbox.addEventListener('click',()=>{
+  lightbox.style.display = 'none'
+ })
 
 function onUpdateLightbox(){
     if(currentLight === 0 ){
